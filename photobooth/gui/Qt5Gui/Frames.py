@@ -47,11 +47,11 @@ class Welcome(QtWidgets.QFrame):
     def initFrame(self, start_action, set_date_action, settings_action,
                   exit_action):
 
-        btnStart = QtWidgets.QPushButton(_('Start photobooth'))
+        btnStart = QtWidgets.QPushButton(_('Start'))
         btnStart.clicked.connect(start_action)
 
-        btnSetDate = QtWidgets.QPushButton(_('Set date/time'))
-        btnSetDate.clicked.connect(set_date_action)
+        # btnSetDate = QtWidgets.QPushButton(_('Set date/time'))
+        # btnSetDate.clicked.connect(set_date_action)
 
         btnSettings = QtWidgets.QPushButton(_('Settings'))
         btnSettings.clicked.connect(settings_action)
@@ -61,19 +61,19 @@ class Welcome(QtWidgets.QFrame):
 
         btnLay = QtWidgets.QHBoxLayout()
         btnLay.addWidget(btnStart)
-        btnLay.addWidget(btnSetDate)
+        # btnLay.addWidget(btnSetDate)
         btnLay.addWidget(btnSettings)
         btnLay.addWidget(btnQuit)
 
         title = QtWidgets.QLabel(_('photobooth'))
 
-        url = 'https://github.com/reuterbal/photobooth'
-        link = QtWidgets.QLabel('<a href="{0}">{0}</a>'.format(url))
+        # url = 'https://github.com/reuterbal/photobooth'
+        # link = QtWidgets.QLabel('<a href="{0}">{0}</a>'.format(url))
 
         lay = QtWidgets.QVBoxLayout()
         lay.addWidget(title)
         lay.addLayout(btnLay)
-        lay.addWidget(link)
+        # lay.addWidget(link)
         self.setLayout(lay)
 
 
